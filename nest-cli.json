@@ -1,0 +1,48 @@
+{
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/shiny-octo-spoon/src",
+  "projects": {
+    "shiny-octo-spoon": {
+      "type": "application",
+      "root": "apps/shiny-octo-spoon",
+      "entryFile": "main",
+      "sourceRoot": "apps/shiny-octo-spoon/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/shiny-octo-spoon/tsconfig.app.json"
+      }
+    },
+    "api-user": {
+      "type": "application",
+      "root": "apps/api-user",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-user/tsconfig.app.json"
+      }
+    },
+    "azure-servicebus": {
+      "type": "library",
+      "root": "libs/azure-servicebus",
+      "entryFile": "index",
+      "sourceRoot": "libs/azure-servicebus/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/azure-servicebus/tsconfig.lib.json"
+      }
+    },
+    "user-domain": {
+      "type": "application",
+      "root": "apps/user-domain",
+      "entryFile": "main",
+      "sourceRoot": "apps/user-domain/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user-domain/tsconfig.app.json"
+      }
+    }
+  },
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/shiny-octo-spoon/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/shiny-octo-spoon"
+}
